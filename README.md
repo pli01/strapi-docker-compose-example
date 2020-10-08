@@ -10,6 +10,11 @@
   - In Step 1, we select the MongoDB tab
 - [Docker Compose file version 3 reference](https://docs.docker.com/compose/compose-file/)
 
+## bootstrap
+docker-compose  run --service-port --entrypoint /bin/bash strapiexample -c "npx create-strapi-app test --quickstart"
+docker-compose  run --service-port --entrypoint /bin/bash strapiexample -c "npm install"
+docker-compose  run --service-port --entrypoint /bin/bash strapiexample -c "npm audit"
+
 ## Install
 
 - Clone this repo, take a look at the `docker-compose.yml` file
