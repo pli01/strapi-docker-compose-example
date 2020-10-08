@@ -1,13 +1,14 @@
 {
   "kind": "collectionType",
-  "connection": "default",
   "collectionName": "articles",
   "info": {
-    "name": "Article"
+    "name": "Article",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": true
   },
   "attributes": {
     "title": {
