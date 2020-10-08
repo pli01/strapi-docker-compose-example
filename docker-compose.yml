@@ -13,14 +13,19 @@ services:
       DATABASE_PORT: ${DATABASE_PORT}
       DATABASE_USERNAME: ${DATABASE_USERNAME}
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      http_proxy: ${http_proxy}
+      https_proxy: ${https_proxy}
+      no_proxy: ${no_proxy}
     #    links:
     #      - mongo:mongo
     networks:
       - strapi-app-network
     volumes:
+      #- ./new:/srv/app
       - ./app:/srv/app
     ports:
-      - "1337:1337"
+      - "80:1337"
+    command: 'strapi start'
 
   mongoexample:
     image: mongo
