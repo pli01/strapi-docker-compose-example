@@ -11,9 +11,11 @@
 - [Docker Compose file version 3 reference](https://docs.docker.com/compose/compose-file/)
 
 ## bootstrap
+```bash
 docker-compose  run --rm --service-port --entrypoint /bin/bash strapiexample -c "npx create-strapi-app test --quickstart"
 docker-compose  run --rm --entrypoint /bin/bash strapiexample -c "npm install"
 docker-compose  run --rm --entrypoint /bin/bash strapiexample -c "npm audit"
+```
 
 ## Install
 
