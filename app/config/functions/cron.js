@@ -11,6 +11,12 @@
  */
 
 module.exports = {
+  '*/3 * * * *': () => {
+    strapi.config.functions.docker();
+  },
+};
+
+//module.exports = {
   /**
    * Simple example.
    * Every monday at 1am.
@@ -18,4 +24,4 @@ module.exports = {
   // '0 1 * * 1': () => {
   //
   // }
-};
+//};
