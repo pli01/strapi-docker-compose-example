@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "centres",
+  "info": {
+    "name": "centre"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nom": {
+      "type": "string",
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "adresse": {
+      "type": "string"
+    },
+    "departement": {
+      "type": "string"
+    },
+    "geoDepartement": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "disabledBy": {
+      "type": "string"
+    },
+    "disabledAt": {
+      "type": "date"
+    },
+    "lat": {
+      "type": "float"
+    },
+    "lon": {
+      "type": "float"
+    }
+  }
+}

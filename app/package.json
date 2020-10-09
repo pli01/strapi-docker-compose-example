@@ -17,6 +17,7 @@
     "strapi-admin": "3.2.1",
     "strapi-connector-bookshelf": "3.2.1",
     "strapi-connector-mongoose": "^3.2.1",
+    "strapi-plugin-content-export-import": "0.0.2",
     "strapi-plugin-content-manager": "3.2.1",
     "strapi-plugin-content-type-builder": "3.2.1",
     "strapi-plugin-documentation": "^3.2.1",
@@ -27,9 +28,6 @@
   },
   "author": {
     "name": "A Strapi developer"
-  },
-  "strapi": {
-    "uuid": "f71c7d1d-37e6-4b85-8fad-6cade9ba752a"
   },
   "engines": {
     "node": ">=10.0.0",
