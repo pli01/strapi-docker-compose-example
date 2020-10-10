@@ -15,6 +15,8 @@
 docker-compose  run --rm --service-port --entrypoint /bin/bash strapiexample -c "npx create-strapi-app test --quickstart"
 docker-compose  run --rm --entrypoint /bin/bash strapiexample -c "npm install"
 docker-compose  run --rm --entrypoint /bin/bash strapiexample -c "npm audit"
+# to build app container and run it
+docker-compose  up --build
 ```
 
 ## Install
