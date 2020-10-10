@@ -2,8 +2,17 @@ version: "3"
 
 services:
   strapiexample:
-    image: strapi/strapi
+    image: app-strapi:latest
     container_name: strapiexample
+    # to build app-strapi image
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        http_proxy: ${http_proxy}
+        https_proxy: ${http_proxy}
+        no_proxy: ${no_proxy}
+        npm_registry: ${NPM_REGISTRY}
     restart: unless-stopped
     env_file: .env
     environment:
@@ -16,11 +25,12 @@ services:
     #      - mongo:mongo
     networks:
       - strapi-app-network
-    volumes:
-      # - ./new:/srv/app
-      - ./app:/srv/app
     ports:
       - "80:1337"
+    volumes:
+      # - ./new:/srv/app
+      # - ./app:/srv/app
+       - ./app/config/middleware.js:/app/config/middleware.js
     # command: 'strapi start'
 
   mongoexample:
