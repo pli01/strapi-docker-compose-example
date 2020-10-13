@@ -10,9 +10,12 @@ module.exports = {
   // GET /hits
   async index(ctx) {
 
-   // use httpsoverhttp custom strapi function
-   const agent = strapi.config.functions.httpsOverHttp();
+   // get proxy variable
+   const proxy = strapi.config.functions.httpsOverHttp();
   
+   // use httpsoverhttp custom strapi function
+   const agent = tunnel.httpsOverHttp( proxy );
+
    const { data } = await axios.get('https://hub.docker.com/v2/repositories/strapi/strapi/', { proxy: false, httpsAgent: agent } );
 
   return { data: data, count: data.pull_count, date: new Date() };
